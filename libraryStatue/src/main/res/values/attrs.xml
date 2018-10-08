@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatueView">
+        <attr name="error_icon" format="reference"/>
+        <attr name="error_tip" format="string"/>
+        <attr name="empty_icon" format="reference"/>
+        <attr name="empty_tip"  format="string"/>
+        <attr name="no_network_icon" format="reference"/>
+        <attr name="no_network_tip" format="string"/>
+    </declare-styleable>
+</resources>
