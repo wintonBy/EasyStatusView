@@ -1,7 +1,6 @@
 package com.winton.librarystatue
 
 import android.content.Context
-import android.support.v4.view.LayoutInflaterCompat
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
@@ -29,7 +28,7 @@ class StatueView : RelativeLayout,IStatueView{
 
     private var mStatus = IStatueView.STATUS_CONTENT
 
-    var mListener:IStatueListener? = null
+    var mRetryListener:IStatueListener? = null
 
     private val viewParams:LayoutParams by lazy {
         LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT)
@@ -103,7 +102,7 @@ class StatueView : RelativeLayout,IStatueView{
             findViewById<ImageView>(R.id.iv_icon).setImageResource(mErrorViewIconRes)
             findViewById<TextView>(R.id.tv_tip).setText(mErrorTextRes)
             mErrorView?.setOnClickListener {
-                mListener?.onRetry()
+                mRetryListener?.onRetry()
             }
         }
         showViewByStatus(mStatus)
@@ -117,7 +116,7 @@ class StatueView : RelativeLayout,IStatueView{
             findViewById<ImageView>(R.id.iv_icon).setImageResource(mEmptyViewIconRes)
             findViewById<TextView>(R.id.tv_tip).setText(mEmptyTextRes)
             mEmptyView?.setOnClickListener{
-                mListener?.onRetry()
+                mRetryListener?.onRetry()
             }
         }
         showViewByStatus(mStatus)
@@ -143,12 +142,12 @@ class StatueView : RelativeLayout,IStatueView{
     override fun showNoNetwork() {
         mStatus = IStatueView.STATUS_NO_NETWOEK
         if(mNoNetworkView == null){
-            mNoNetworkView = getView(mStatus)
+            mNoNetworkView = getView(R.layout.common_view)
             addView(mNoNetworkView,0,viewParams)
             findViewById<ImageView>(R.id.iv_icon).setImageResource(mNoNetworkViewIconRes)
             findViewById<TextView>(R.id.tv_tip).setText(mNoNetworkTextRes)
             mNoNetworkView?.setOnClickListener{
-                mListener?.onRetry()
+                mRetryListener?.onRetry()
             }
         }
         showViewByStatus(mStatus)

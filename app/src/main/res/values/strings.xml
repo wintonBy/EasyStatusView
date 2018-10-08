@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EasyStatueView</string>
+    <string name="st1">我是修改后的全局错误提示</string>
+    <string name="str2">我是自定义的局部网络提示</string>
 </resources>

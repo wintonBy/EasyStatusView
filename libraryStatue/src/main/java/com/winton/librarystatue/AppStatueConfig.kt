@@ -16,6 +16,8 @@ class AppStatueConfig {
         }
         return field
     }
+    private set
+
     /**
      * empty 文本提示
      */

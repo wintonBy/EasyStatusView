@@ -4,6 +4,8 @@ import android.app.Application;
 import android.support.v4.widget.SwipeRefreshLayout;
 
 import com.winton.librarystatue.AppStatueConfig;
+import com.winton.librarystatue.IStatueListener;
+import com.winton.librarystatue.StatueView;
 import com.winton.librarystatue.StatusViewFactory;
 
 /**
@@ -16,5 +18,7 @@ public class MyAppliction extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        StatusViewFactory.Companion.appConfig().errorTip(R.string.st1);
+
     }
 }

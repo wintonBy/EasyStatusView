@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.winton.librarystatue.StatueView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/status_id"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
-        android:text="asd"
+    >
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <com.winton.librarystatue.StatueView
+            android:id="@+id/statue_empty"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:text="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.winton.librarystatue.StatueView>
+        <com.winton.librarystatue.StatueView
+            android:id="@+id/statue_error"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:text="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.winton.librarystatue.StatueView>
+        <com.winton.librarystatue.StatueView
+            android:id="@+id/statue_loading"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:text="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.winton.librarystatue.StatueView>
+        <com.winton.librarystatue.StatueView
+            android:id="@+id/statue_no_net"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:text="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.winton.librarystatue.StatueView>
+        <com.winton.librarystatue.StatueView
+            android:id="@+id/statue_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <TextView
+                android:text="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.winton.librarystatue.StatueView>
+    </LinearLayout>
 
+</android.support.v4.widget.NestedScrollView>
 
-</com.winton.librarystatue.StatueView>
