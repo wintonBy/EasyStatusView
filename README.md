@@ -17,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 ```
 	dependencies {
-	        implementation 'com.github.wintonBy:EasyZxing:1.0'
+	        implementation 'com.github.wintonBy:EasyStatueView:1.0'
 	}
 ```
 ## 使用方法
@@ -36,6 +36,7 @@ StatusViewFactory.appConfig().errorTip(R.string.error_tip)
 #### Java 示例
 ```
 statueView.setMErrorTextRes(R.string.st1);
+```
 #### Kotlin 示例
 ```
 statueView.mNoNetworkTextRes = R.string.str2
